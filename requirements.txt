@@ -1,0 +1,50 @@
+# EDITH Authentication System Dependencies
+# Security-focused package selection with version pinning
+
+# Core Framework
+fastapi==0.104.1              # Modern, fast web framework with automatic API docs
+uvicorn[standard]==0.24.0     # ASGI server with performance optimizations
+
+# Authentication & Security
+pyjwt[crypto]==2.8.0          # JWT token handling with cryptographic signatures
+passlib[bcrypt]==1.7.4        # Password hashing with bcrypt support
+python-multipart==0.0.6       # Form data parsing for login endpoints
+cryptography==41.0.7          # Low-level cryptographic primitives
+
+# Database
+sqlalchemy==2.0.23            # SQL toolkit and ORM
+alembic==1.12.1               # Database migration tool
+psycopg2-binary==2.9.9        # PostgreSQL adapter
+redis==5.0.1                  # In-memory data store for sessions/cache
+
+# Validation & Serialization
+pydantic==2.5.0               # Data validation using Python type annotations
+email-validator==2.1.0        # Email address validation
+
+# Rate Limiting & Security
+slowapi==0.1.9                # Rate limiting for FastAPI
+python-jose[cryptography]==3.3.0  # JSON Web Signature implementation
+
+# Multi-Factor Authentication
+pyotp==2.9.0                  # One-time password library (TOTP/HOTP)
+qrcode[pil]==7.4.2            # QR code generation for MFA setup
+
+# HTTP Client & Utilities
+httpx==0.25.2                 # Async HTTP client
+python-dotenv==1.0.0          # Environment variable management
+
+# Development & Testing
+pytest==7.4.3                # Testing framework
+pytest-asyncio==0.21.1       # Async testing support
+pytest-cov==4.1.0            # Coverage reporting
+black==23.11.0                # Code formatting
+flake8==6.1.0                 # Code linting
+mypy==1.7.1                   # Static type checking
+
+# Monitoring & Logging
+structlog==23.2.0             # Structured logging
+prometheus-client==0.19.0     # Metrics collection
+
+# Security Scanning (Development)
+bandit==1.7.5                 # Security linting
+safety==2.3.5                 # Dependency vulnerability scanning
